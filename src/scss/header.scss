@@ -1,0 +1,244 @@
+//====================================================================================================
+.header {
+  &__top {
+    padding: 20px 0;
+    background: #E5FBBA;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+
+    .close-banner & {
+      height: 0;
+      overflow: hidden;
+      padding: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__container {
+  }
+
+  &__top-row {
+    position: relative;
+    text-align: center;
+  }
+
+  &__top-text {
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    padding: 0 30px;
+
+    a {
+      font-family: Montserrat;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: -0.32px;
+      text-decoration-line: underline;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      margin-left: 5px;
+
+      &:hover {
+        color: var(--secondary);
+      }
+    }
+  }
+
+  &__top-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__main {
+
+    padding: 20px 0;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__logo {
+    display: inline-block;
+  }
+
+  &__menu {
+  }
+
+  &__right {
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__link {
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 32px;
+
+
+    &:hover {
+      background: #F3F3F3;
+    }
+  }
+
+  &__button {
+    height: 40px;
+    min-width: 104px;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__item {
+    position: relative;
+
+    &:hover {
+      .menu__sublist {
+        opacity: 1;
+        pointer-events: all;
+        visibility: visible;
+      }
+
+      .menu__link {
+        color: var(--secondary);
+
+        img {
+          transform: scaleY(-1);
+
+        }
+      }
+    }
+  }
+
+  &__link {
+    font-family: Montserrat;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+
+
+    img {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    }
+  }
+
+  &__sublist {
+    position: absolute;
+    top: calc(100% + 6px);
+    width: 250px;
+    padding: 16px;
+    z-index: 4;
+    left: 0;
+    background: #E5FBBA;
+    border-radius: 16px;
+    display: grid;
+    gap: 24px;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    visibility: hidden;
+    pointer-events: none;
+
+    &::after {
+      content: '';
+      bottom: 100%;
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      left: 0;
+    }
+
+    a {
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      font-family: Montserrat;
+      font-weight: 600;
+
+      &:hover {
+        color: var(--secondary);
+      }
+    }
+  }
+}
+
+.button {
+}
+
+//====================================================================================================
+
+//Burger
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: toRem(30);
+		height: toRem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - toRem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - toRem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+*/

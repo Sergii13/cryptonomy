@@ -1,0 +1,43 @@
+.grow {
+
+  &__container {
+    background: var(--gradient);
+  }
+
+  &__wrap {
+    padding: 64px 0;
+    text-align: center;
+    max-width: 848px;
+    margin: 0 auto;
+
+  }
+
+  &__title {
+
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__text {
+    line-height: 150%;
+    letter-spacing: 0.32px;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__button {
+    max-width: 574px;
+    width: 100%;
+  }
+}
+
+
+.button {
+}
+
+.button--black {
+}

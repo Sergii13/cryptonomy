@@ -1,0 +1,102 @@
+.faq {
+  padding: 120px 0 80px;
+
+  &__container {
+  }
+
+  &__title {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.44px;
+
+    &:not(:last-child) {
+      margin-bottom: 72px;
+    }
+  }
+
+  &__tabs {
+  }
+
+  &__nav {
+    &:not(:last-child) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__body {
+  }
+
+  &__block {
+  }
+
+  &__spollers {
+  }
+}
+
+
+.faq-spollers {
+  display: grid;
+  gap: 16px;
+
+  &__item {
+    border-radius: 8px;
+    border: 1px solid var(--property-1-diagram-100, #DDD);
+    background: #FFF;
+
+  }
+
+  &__title {
+    padding: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+
+    &._spoller-active {
+      .faq-spollers__icon {
+        color: var(--secondary);
+        transform: scaleY(-1) rotate(180deg);
+      }
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: var(--primary);
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    transform: rotate(180deg);
+
+    svg {
+      max-width: 100%;
+      stroke: currentColor;
+    }
+  }
+
+  &__body {
+    padding: 0 16px 16px;
+  }
+
+  &__text {
+    color: #5E5E5E;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    border-top: 1px solid #DDD;
+    padding-top: 16px;
+  }
+}
