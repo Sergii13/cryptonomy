@@ -46,8 +46,12 @@
   }
 
   &__slider {
-    &.swiper-grid.swiper-grid-column {
+    &.swiper {
       overflow: visible;
+    }
+
+    &.swiper-grid.swiper-grid-column {
+
 
       .swiper-wrapper {
         flex-direction: column;
@@ -61,40 +65,6 @@
 .title-h1 {
 }
 
-.nav-slider {
-  display: flex;
-  align-items: center;
-  width: 170px;
-
-  &__arrow {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #000;
-    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
-
-    &:hover {
-      background: #E5FBBA;
-    }
-  }
-
-  &__arrow--prev {
-  }
-
-  &__pagination {
-    flex: 1 1 auto;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: center;
-
-  }
-
-  &__arrow--next {
-  }
-}
 
 .hear-card {
   &__video {

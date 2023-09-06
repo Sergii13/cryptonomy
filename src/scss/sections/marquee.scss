@@ -1,0 +1,42 @@
+.marquee {
+  position: relative;
+
+  &::after {
+    content: '';
+    background: var(--gradient);
+    width: 3000px;
+    left: 50%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  &__slider {
+    position: relative;
+    z-index: 3;
+
+    .swiper-wrapper {
+
+      transition-timing-function: linear;
+    }
+
+  }
+
+  .swiper-slide {
+    width: auto;
+  }
+
+  &__item {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.44px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 14px 0;
+  }
+}
+

@@ -10,14 +10,25 @@ textarea {
 }
 
 .input {
-  border-radius: 0 !important;
   width: 100%;
   display: block;
-  padding: 0px 20px;
-  border: 1px solid #eee;
+  padding: 0px 12px;
+  border-radius: 27px;
+  border: 1px solid #ECECEC;
+  background: #FFF;
+  height: 56px;
   outline: none;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  color: #000;
+  transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+
+  &::placeholder {
+    color: #6F7A83;
+  }
 
   &._form-focus {
+    box-shadow: 0px 0px 0px 2px #ECECEC;
   }
 
   &._form-error {

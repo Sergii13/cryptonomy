@@ -127,6 +127,11 @@
     line-height: 24px;
     letter-spacing: 0.32px;
     padding: 0;
+    height: auto;
+
+    &._form-focus {
+      box-shadow: none
+    }
   }
 
   &__button {
