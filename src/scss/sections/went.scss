@@ -1,8 +1,19 @@
 .went {
   padding: 60px 0;
+  @media (max-width: $mobile) {
+    padding: 50px 0;
+  }
 
   &__container {
   }
+
+  &__nav-mob {
+    margin: 27px auto 0;
+    @media (min-width: $mobile) {
+      display: none;
+    }
+  }
+
 
   &__slider {
     .swiper-slide {
@@ -28,6 +39,9 @@
 
   &__nav {
     width: 128px;
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 
   &__prev {
@@ -43,18 +57,37 @@
   align-items: center;
   justify-content: space-between;
   gap: 50px;
+  @media (max-width: $mobile) {
+    display: block;
+  }
 
   &__content {
     max-width: 622px;
+    @media (max-width: $mobile) {
+      max-width: 100%;
+    }
   }
 
   &__title {
+    br {
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+
     &:not(:last-child) {
       margin-bottom: 64px;
+      @media (max-width: $mobile) {
+        margin-bottom: 74px;
+      }
     }
   }
 
   &__author {
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
+
     &:not(:last-child) {
       margin-bottom: 48px;
     }
@@ -65,15 +98,37 @@
     font-weight: 700;
     line-height: 132%;
     letter-spacing: -0.34px;
+    @media (max-width: $mobile) {
+      font-size: 28px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 24px;
+      @media (max-width: $mobile) {
+        margin-bottom: 4px;
+      }
     }
   }
 
   &__author-info {
     line-height: 24px;
     letter-spacing: 0.32px;
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
+  }
+
+  &__image-mob-ibg {
+    border-radius: 12.8px;
+    aspect-ratio: 264/327;
+    width: 100%;
+    overflow: hidden;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 74px;
+    @media (min-width: $mobile) {
+      display: none;
+    }
   }
 
   &__image-ibg {
@@ -83,6 +138,14 @@
     width: percent(496, 1260);
     aspect-ratio: 496/615;
     flex-shrink: 0;
+    @media (max-width: $mobile) {
+      border-radius: 12.8px;
+      aspect-ratio: 264/327;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      display: none;
+    }
   }
 
 }

@@ -1,5 +1,8 @@
 .what {
   padding: 80px 0 60px;
+  @media (max-width: $mobile) {
+    padding: 100px 0 50px;
+  }
 
   &__container {
   }
@@ -9,6 +12,9 @@
 
     &:not(:last-child) {
       margin-bottom: 72px;
+      @media (max-width: $mobile) {
+        margin-bottom: 32px;
+      }
     }
   }
 
@@ -18,9 +24,18 @@
   }
 
   &__nav {
+    @media (max-width: $mobile) {
+      width: 100%;
+      max-width: 100%;
+    }
+
     .nav__item {
       min-width: 289px;
       cursor: pointer;
+      @media (max-width: $mobile) {
+        min-width: auto;
+        flex: 1 1 auto;
+      }
     }
 
     margin-bottom: 48px;
@@ -46,9 +61,17 @@
     background: #E5FBBA;
     box-shadow: 0px 8.38944px 10.01724px 0px rgba(31, 64, 60, 0.07), 0px 67px 80px 0px rgba(31, 64, 60, 0.04);
     margin-top: 80px;
+    @media (max-width: $mobile) {
+      margin-top: 48px;
+      padding: 12px 32px;
+
+    }
 
     &:not(:last-child) {
       margin-bottom: 56px;
+      @media (max-width: $mobile) {
+        margin-bottom: 24px;
+      }
     }
   }
 
@@ -57,12 +80,23 @@
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+    @media (max-width: $mobile) {
+      display: block;
+      gap: 18px;
+      text-align: center;
+    }
   }
 
   &__label-info {
     max-width: 177px;
     line-height: 24px;
     letter-spacing: 0.32px;
+    @media (max-width: $mobile) {
+      max-width: 100%;
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
   }
 
   &__info-value {
@@ -71,12 +105,18 @@
       font-weight: 700;
       line-height: 132%;
       letter-spacing: -0.34px;
+      @media (max-width: $mobile) {
+        font-size: 28px;
+      }
     }
 
     p {
       color: rgba(12, 33, 51, 0.58);
       line-height: 24px;
       letter-spacing: 0.32px;
+      @media (max-width: $mobile) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -98,6 +138,9 @@
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.28px;
+    @media (max-width: $mobile) {
+      font-size: 12px;
+    }
   }
 }
 
@@ -107,6 +150,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 48px;
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 24px;
+    }
   }
 }
 

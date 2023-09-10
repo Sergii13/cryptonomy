@@ -1,11 +1,17 @@
 .faq {
   padding: 120px 0 80px;
+  @media (max-width: $mobile) {
+    padding: 50px 0;
+  }
 
   &__container {
   }
 
   &__title {
     text-align: center;
+    @media (max-width: $mobile) {
+      text-align: left;
+    }
 
     &:not(:last-child) {
       margin-bottom: 8px;
@@ -18,9 +24,16 @@
     font-weight: 600;
     line-height: 28px;
     letter-spacing: -0.44px;
+    @media (max-width: $mobile) {
+      text-align: left;
+      font-size: 18px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 72px;
+      @media (max-width: $mobile) {
+        margin-bottom: 32px;
+      }
     }
   }
 
@@ -28,8 +41,23 @@
   }
 
   &__nav {
+    @media (max-width: $mobile) {
+      width: 100%;
+      max-width: 100%;
+    }
+
     &:not(:last-child) {
       margin-bottom: 64px;
+      @media (max-width: $mobile) {
+        margin-bottom: 48px;
+      }
+    }
+
+    .nav__item {
+      @media (max-width: $mobile) {
+        min-width: auto;
+        flex: 1 1 auto;
+      }
     }
   }
 
@@ -65,6 +93,9 @@
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0.32px;
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
 
     &._spoller-active {
       .faq-spollers__icon {
@@ -98,5 +129,8 @@
     letter-spacing: 0.32px;
     border-top: 1px solid #DDD;
     padding-top: 16px;
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
   }
 }

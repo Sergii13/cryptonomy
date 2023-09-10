@@ -9,6 +9,9 @@
     text-align: center;
     max-width: 848px;
     margin: 0 auto;
+    @media (max-width: $mobile) {
+      padding: 32px 0 48px;
+    }
 
   }
 
@@ -17,12 +20,19 @@
 
     &:not(:last-child) {
       margin-bottom: 24px;
+      @media (max-width: $mobile) {
+        margin-bottom: 8px;
+      }
     }
   }
 
   &__text {
     line-height: 150%;
     letter-spacing: 0.32px;
+    @media (max-width: $mobile) {
+      font-size: 14px;
+      letter-spacing: 0.28px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 32px;

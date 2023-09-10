@@ -1,5 +1,10 @@
 .why {
   padding: 120px 0 80px;
+  @media (max-width: $mobile) {
+    position: relative;
+    padding-top: 147px;
+    padding-bottom: 50px;
+  }
 
   &__container {
   }
@@ -8,9 +13,19 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    @media (max-width: $mobile) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-top: 24px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 56px;
+      @media (max-width: $mobile) {
+        margin-bottom: 48px;
+      }
     }
   }
 
@@ -24,6 +39,14 @@
   &__image {
     width: percent(502, 1260);
     flex-shrink: 0;
+    @media (max-width: $mobile) {
+      width: 361px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0 auto;
+    }
 
     img {
       max-width: 100%;
@@ -37,6 +60,12 @@
   &__title {
     &:not(:last-child) {
       margin-bottom: 100px;
+      @media (max-width: $tablet) {
+        margin-bottom: 60px;
+      }
+      @media (max-width: $tablet) {
+        margin-bottom: 40px;
+      }
     }
   }
 
@@ -44,6 +73,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 18px;
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
 
@@ -52,12 +84,21 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
 
 .why-item-top {
   text-align: center;
   padding: 27px 16px 12px;
+  @media (max-width: $mobile) {
+    padding: 8px 21px;
+  }
 
   &__images {
     height: 40px;
@@ -66,6 +107,14 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 24px;
+    @media (max-width: $tablet) {
+      gap: 16px;
+      height: 20px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 0;
+    }
+
 
     img {
       max-height: 100%;
@@ -77,6 +126,9 @@
     line-height: 24px;
     letter-spacing: 0.28px;
     color: #6F7A83;
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 }
 
@@ -138,9 +190,15 @@
     font-weight: 600;
     line-height: 28px;
     letter-spacing: -0.44px;
+    @media (max-width: $mobile) {
+      font-size: 18px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 12px;
+      @media (max-width: $mobile) {
+        margin-bottom: 8px;
+      }
     }
   }
 
@@ -148,12 +206,19 @@
     color: #52525B;
     line-height: 24px;
     letter-spacing: 0.32px;
+    @media (max-width: $mobile) {
+      font-size: 14px;
+      line-height: 155%;
+    }
   }
 }
 
 .why-item-info {
   padding: 3px 0px 3px 24px;
   position: relative;
+  @media (max-width: $mobile) {
+    padding: 0 0 12px;
+  }
 
   &::after {
     content: '';
@@ -164,6 +229,13 @@
     top: 0;
     border-radius: 3px;
     background: linear-gradient(180deg, rgba(1, 187, 223, 1) 0%, rgba(1, 223, 165, 1) 100%);
+    @media (max-width: $mobile) {
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      top: auto;
+    }
   }
 
   &__value {
@@ -171,11 +243,18 @@
     line-height: 132%;
     letter-spacing: -0.32px;
     margin-bottom: 8px;
+    @media (max-width: $mobile) {
+      font-size: 28px;
+      margin-bottom: 4px;
+    }
   }
 
   &__text {
     color: #6F7A83;
     line-height: 24px;
     letter-spacing: 0.32px;
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
   }
 }

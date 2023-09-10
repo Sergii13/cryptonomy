@@ -1,5 +1,8 @@
 .world {
   padding: 80px 0 120px;
+  @media (max-width: $mobile) {
+    padding: 50px 0 40px;
+  }
 
   &__container {
   }
@@ -9,19 +12,39 @@
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
 
     &:not(:last-child) {
       margin-bottom: 64px;
+      @media (max-width: $mobile) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &__nav-mob {
+    width: 170px;
+    margin: 32px auto 0;
+    @media (min-width: $tablet) {
+      display: none;
     }
   }
 
   &__title {
     max-width: 70%;
+    @media (max-width: $tablet) {
+      max-width: 100%;
+    }
   }
 
   &__nav {
     width: 128px;
     flex-shrink: 0;
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 
   &__prev {
@@ -31,10 +54,25 @@
   }
 
   &__slider {
+    &.swiper {
+      @media (max-width: $tablet) {
+        overflow: visible;
+      }
+    }
+
     .swiper-wrapper {
       max-height: 600px;
       flex-direction: column;
       flex-wrap: wrap;
+    }
+
+    .swiper-slide {
+      @media (max-width: $tablet) {
+        width: 312px;
+      }
+      @media (max-width: 370px) {
+        width: 250px;
+      }
     }
   }
 }
@@ -42,7 +80,12 @@
 
 .world-card {
   display: flex;
+  align-items: flex-start;
   gap: 24px;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    gap: 12px;
+  }
 
   &__image-ibg {
     border-radius: 24px;
@@ -50,6 +93,21 @@
     flex-shrink: 0;
     aspect-ratio: 226/212;
     width: percent(226, 600);
+    @media (max-width: $tablet) {
+      border-radius: 24px;
+      position: relative;
+      aspect-ratio: 2;
+      width: 100%;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+      }
+    }
   }
 
   &__content {
@@ -60,9 +118,15 @@
     font-weight: 600;
     line-height: 28px;
     letter-spacing: -0.44px;
+    @media (max-width: $mobile) {
+      font-size: 18px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 24px;
+      @media (max-width: $mobile) {
+        margin-bottom: 8px;
+      }
     }
   }
 
@@ -72,6 +136,10 @@
     letter-spacing: 0.32px;
     padding-bottom: 32px;
     position: relative;
+    @media (max-width: $mobile) {
+      font-size: 14px;
+      padding-bottom: 16px;
+    }
 
     &::after {
       content: '';
@@ -92,7 +160,4 @@
 
   &__link {
   }
-}
-
-.link {
 }

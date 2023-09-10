@@ -1,5 +1,8 @@
 .key {
   padding: 60px 0;
+  @media (max-width: $mobile) {
+    padding: 50px 0;
+  }
 
   &__container {
   }
@@ -11,12 +14,18 @@
 
     &:not(:last-child) {
       margin-bottom: 96px;
+      @media (max-width: $mobile) {
+        margin-bottom: 64px;
+      }
     }
   }
 
   &__title {
     &:not(:last-child) {
       margin-bottom: 8px;
+      @media (max-width: $mobile) {
+        margin-bottom: 16px;
+      }
     }
   }
 
@@ -25,9 +34,15 @@
     font-size: 22px;
     line-height: 28px;
     letter-spacing: -0.44px;
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 40px;
+      @media (max-width: $mobile) {
+        margin-bottom: 32px;
+      }
     }
   }
 
@@ -35,12 +50,22 @@
     height: 40px;
     width: 100%;
     max-width: 324px;
+    @media (max-width: $mobile) {
+      height: 56px;
+    }
   }
 
   &__grid-layout {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    @media (max-width: $tablet) {
+      gap: 16px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
@@ -54,6 +79,10 @@
   background: #0E0E0E;
   padding: 38px 24px;
   color: #fff;
+  @media (max-width: $mobile) {
+    border-radius: 12px;
+    padding: 32px 24px;
+  }
 
   &__icon {
     width: 32px;
@@ -61,6 +90,9 @@
 
     &:not(:last-child) {
       margin-bottom: 56px;
+      @media (max-width: $mobile) {
+        margin-bottom: 16px;
+      }
     }
 
     img {
@@ -73,6 +105,9 @@
     font-weight: 600;
     line-height: 28px;
     letter-spacing: -0.44px;
+    @media (max-width: $mobile) {
+      margin-bottom: 18px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 8px;

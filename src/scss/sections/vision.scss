@@ -1,5 +1,8 @@
 .vision {
   padding: 60px 0;
+  @media (max-width: $mobile) {
+    padding: 50px 0;
+  }
 
   &__container {
   }
@@ -8,6 +11,13 @@
     display: flex;
     align-items: flex-start;
     gap: 120px;
+    @media (max-width: $pc) {
+      gap: 40px;
+    }
+    @media (max-width: $mobile) {
+      display: block;
+    }
+
   }
 
   &__content {
@@ -17,19 +27,32 @@
   &__subtitle {
     &:not(:last-child) {
       margin-bottom: 24px;
+      @media (max-width: $mobile) {
+        margin-bottom: 8px;
+      }
     }
   }
 
   &__title {
     &:not(:last-child) {
       margin-bottom: 24px;
+      @media (max-width: $mobile) {
+        margin-bottom: 38px;
+      }
     }
   }
 
   &__text {
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
+
     & > * {
       &:not(:last-child) {
         margin-bottom: 8px;
+        @media (max-width: $mobile) {
+          margin-bottom: 16px;
+        }
       }
     }
 
@@ -44,6 +67,10 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      margin-top: 40px;
+    }
   }
 
   &__image-ibg {
@@ -52,19 +79,19 @@
     border-radius: 32px;
     overflow: hidden;
     aspect-ratio: 520/580;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__image-mob-ibg {
+    border-radius: 32px;
+    overflow: hidden;
+    height: 312px;
+    margin: 27px 0;
+    @media (min-width: $mobile) {
+      display: none;
+    }
   }
 }
 
-.subtitle {
-}
-
-.title-h1 {
-}
-
-.why-item-info {
-  &__value {
-  }
-
-  &__text {
-  }
-}
