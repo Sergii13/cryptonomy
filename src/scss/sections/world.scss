@@ -24,13 +24,6 @@
     }
   }
 
-  &__nav-mob {
-    width: 170px;
-    margin: 32px auto 0;
-    @media (min-width: $tablet) {
-      display: none;
-    }
-  }
 
   &__title {
     max-width: 70%;
@@ -42,8 +35,16 @@
   &__nav {
     width: 128px;
     flex-shrink: 0;
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
+      width: 170px;
+      margin: 32px auto 0;
+    }
+
+    .nav-slider__pagination {
       display: none;
+      @media (max-width: $tablet) {
+        display: block;
+      }
     }
   }
 
