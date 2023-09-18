@@ -1,142 +1,141 @@
 .main-block {
-  background: linear-gradient(13deg, #FFF 17.61%, #82C6C0 56.54%, #96BBF2 91.61%);
-  overflow: hidden;
-  z-index: 2;
-  position: relative;
+    background: linear-gradient(13deg, #FFF 17.61%, #82C6C0 56.54%, #96BBF2 91.61%);
+    z-index: 2;
+    position: relative;
 
-  &__container {
-  }
-
-  &__row {
-    display: flex;
-    align-items: center;
-    gap: 90px;
-    @media (max-width: $tablet) {
-      gap: 40px;
-    }
-    @media (max-width: $mobile) {
-      display: block;
-    }
-  }
-
-  &__content {
-    padding: 100px 0;
-    width: percent(620, 1260);
-    flex-shrink: 0;
-    @media (max-width: $tablet) {
-      padding: 50px 0;
-    }
-    @media (max-width: $mobile) {
-      padding: 40px 0 65px;
-      width: 100%;
-    }
-  }
-
-  &__title {
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 120%;
-    letter-spacing: -0.64px;
-    @media (max-width: $tablet) {
-      font-size: 44px;
-    }
-    @media (max-width: $mobile) {
-      font-size: 38px;
+    &__container {
     }
 
-    &:not(:last-child) {
-      margin-bottom: 16px;
-    }
-  }
-
-  &__text {
-    max-width: 600px;
-    font-size: 22px;
-    font-family: Montserrat;
-    line-height: 164%;
-    @media (max-width: $tablet) {
-      font-size: 18px;
-    }
-    @media (max-width: $mobile) {
-      font-size: 16px;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: 48px;
-    }
-  }
-
-  &__buttons {
-    display: flex;
-    gap: 13px;
-    @media (max-width: $mobileSmall) {
-      flex-direction: column;
-    }
-  }
-
-  &__button {
-    min-width: 164px;
-  }
-
-  &__sliders {
-    flex: 1 1 auto;
-    display: grid;
-    pointer-events: none;
-    min-width: 0;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-    @media (max-width: $tablet) {
-      gap: 16px;
-    }
-    @media (max-width: $mobile) {
-      display: block;
-    }
-
-    .swiper-wrapper {
-      transition-timing-function: linear;
-    }
-
-    .swiper-slide {
-      height: 340px;
-      @media (max-width: $tablet) {
-        height: 180px;
-      }
-      @media (max-width: $mobile) {
-        width: 136px;
-        &:nth-child(even) {
-          transform: translateY(15px);
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 90px;
+        @media (max-width: $tablet) {
+            gap: 40px;
         }
-      }
-    }
-  }
-
-  &__slider {
-    width: 100%;
-    min-width: 0;
-    height: 740px;
-    @media (max-width: $tablet) {
-      height: 500px;
-    }
-    @media (max-width: $mobile) {
-      height: auto;
-    }
-    @media (max-width: $mobile) {
-      &:last-child {
-        display: none;
-      }
+        @media (max-width: $mobile) {
+            display: block;
+        }
     }
 
-    &.swiper {
-      @media (max-width: $mobile) {
-        overflow: visible;
-      }
+    &__content {
+        padding: 100px 0;
+        width: percent(620, 1260);
+        flex-shrink: 0;
+        @media (max-width: $tablet) {
+            padding: 50px 0;
+        }
+        @media (max-width: $mobile) {
+            padding: 40px 0 65px;
+            width: 100%;
+        }
     }
-  }
 
-  &__image-ibg {
-    border-radius: 18px;
-    overflow: hidden;
-    height: 100%;
-  }
+    &__title {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: -0.64px;
+        @media (max-width: $tablet) {
+            font-size: 44px;
+        }
+        @media (max-width: $mobile) {
+            font-size: 38px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__text {
+        max-width: 600px;
+        font-size: 22px;
+        font-family: Montserrat;
+        line-height: 164%;
+        @media (max-width: $tablet) {
+            font-size: 18px;
+        }
+        @media (max-width: $mobile) {
+            font-size: 16px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 48px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 13px;
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
+        }
+    }
+
+    &__button {
+        min-width: 164px;
+    }
+
+    &__sliders {
+        flex: 1 1 auto;
+        display: grid;
+        pointer-events: none;
+        min-width: 0;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        @media (max-width: $tablet) {
+            gap: 16px;
+        }
+        @media (max-width: $mobile) {
+            display: block;
+        }
+
+        .swiper-wrapper {
+            transition-timing-function: linear;
+        }
+
+        .swiper-slide {
+            height: 340px;
+            @media (max-width: $tablet) {
+                height: 180px;
+            }
+            @media (max-width: $mobile) {
+                width: 136px;
+                &:nth-child(even) {
+                    transform: translateY(15px);
+                }
+            }
+        }
+    }
+
+    &__slider {
+        width: 100%;
+        min-width: 0;
+        height: 740px;
+        @media (max-width: $tablet) {
+            height: 500px;
+        }
+        @media (max-width: $mobile) {
+            height: auto;
+        }
+        @media (max-width: $mobile) {
+            &:last-child {
+                display: none;
+            }
+        }
+
+        &.swiper {
+            @media (max-width: $mobile) {
+                overflow: visible;
+            }
+        }
+    }
+
+    &__image-ibg {
+        border-radius: 18px;
+        overflow: hidden;
+        height: 100%;
+    }
 }
 

@@ -4,48 +4,48 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .input {
-  width: 100%;
-  display: block;
-  padding: 0px 12px;
-  border-radius: 27px;
-  border: 1px solid #ECECEC;
-  background: #FFF;
-  height: 56px;
-  outline: none;
-  line-height: 24px;
-  letter-spacing: 0.32px;
-  color: #000;
-  transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    width: 100%;
+    display: block;
+    padding: 0px 20px;
+    border-radius: 27px;
+    border: 1px solid #ECECEC;
+    background: #FFF;
+    height: 56px;
+    outline: none;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    color: #000;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
 
-  &::placeholder {
-    color: #6F7A83;
-  }
+    &::placeholder {
+        color: #6F7A83;
+    }
 
-  &._form-focus {
-    box-shadow: 0px 0px 0px 2px #ECECEC;
-  }
+    &._form-focus {
+        box-shadow: 0px 0px 0px 2px #ECECEC;
+    }
 
-  &._form-error {
-  }
+    &._form-error {
+    }
 }
 
 .input[placeholder]:not([data-placeholder-nohiden]) {
-  &::placeholder {
-    transition: opacity 0.3s;
-  }
+    &::placeholder {
+        transition: opacity 0.3s;
+    }
 
-  &:focus::placeholder {
-    opacity: 0;
-  }
+    &:focus::placeholder {
+        opacity: 0;
+    }
 }
 
 textarea.input {
-  resize: none;
-  padding: 0px 0px;
+    resize: none;
+    padding: 0px 0px;
 }

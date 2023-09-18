@@ -1,92 +1,92 @@
 .keep {
-  padding: 50px 0 60px;
-  @media (max-width: $mobile) {
-    padding: 32px 0 50px;
-  }
-
-  &__container {
-  }
-
-  &__row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+    padding: 50px 0 60px;
     @media (max-width: $mobile) {
-      display: block;
-    }
-  }
-
-  &__content {
-    max-width: 622px;
-    @media (max-width: $mobile) {
-      max-width: 100%;
-      margin-bottom: 40px;
-    }
-  }
-
-  &__subtitle {
-    &:not(:last-child) {
-      margin-bottom: 48px;
-      @media (max-width: $mobile) {
-        margin-bottom: 8px;
-      }
-    }
-  }
-
-  &__title {
-    @media (max-width: $mobile) {
-      br {
-        display: none;
-      }
+        padding: 32px 0 50px;
     }
 
-    &:not(:last-child) {
-      margin-bottom: 24px;
-      @media (max-width: $mobile) {
-        margin-bottom: 16px;
-      }
-    }
-  }
-
-  &__text {
-    color: #3F3F46;
-    line-height: 24px;
-    letter-spacing: 0.32px;
-    @media (max-width: $mobile) {
-      font-size: 14px;
-      line-height: 155%;
-      letter-spacing: 0.28px;
-      br {
-        display: none;
-      }
+    &__container {
     }
 
-    &:not(:last-child) {
-      margin-bottom: 29px;
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        @media (max-width: $mobile) {
+            display: block;
+        }
     }
-  }
 
-  &__link {
-    @media (max-width: $mobile) {
-      display: none;
+    &__content {
+        max-width: 622px;
+        @media (max-width: $mobile) {
+            max-width: 100%;
+            margin-bottom: 40px;
+        }
     }
-  }
 
-  &__link-mob {
-    margin-top: 25px;
-    @media (min-width: $mobile) {
-      display: none;
+    &__subtitle {
+        &:not(:last-child) {
+            margin-bottom: 48px;
+            @media (max-width: $mobile) {
+                margin-bottom: 8px;
+            }
+        }
     }
-  }
 
-  &__image {
-    @include adaptiveValue("width", 502, 300, 0, 1300, 991);
-    flex-shrink: 0;
-    @media (max-width: $mobile) {
-      max-width: 300px;
-      margin: 0 auto;
+    &__title {
+        @media (max-width: $mobile) {
+            br {
+                display: none;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+            @media (max-width: $mobile) {
+                margin-bottom: 16px;
+            }
+        }
     }
-  }
+
+    &__text {
+        color: #3F3F46;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+        @media (max-width: $mobile) {
+            font-size: 14px;
+            line-height: 155%;
+            letter-spacing: 0.28px;
+            br {
+                display: none;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 29px;
+        }
+    }
+
+    &__link {
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__link-mob {
+        margin-top: 25px !important;
+        @media (min-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__image {
+        @include adaptiveValue("width", 502, 300, 0, 1300, 991);
+        flex-shrink: 0;
+        @media (max-width: $mobile) {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    }
 }
 
