@@ -39,3 +39,32 @@ for (let i = 0; i < videoBlock.length; i++) {
     }
   };
 }
+let blockToHide = document.querySelector(".bottom-block");
+let startY = 0;
+let isDragging = false;
+
+blockToHide.addEventListener("touchstart", function (event) {
+  startY = event.touches[0].clientY;
+  isDragging = false;
+});
+
+blockToHide.addEventListener("touchmove", function (event) {
+  let currentY = event.touches[0].clientY;
+  let deltaY = currentY - startY;
+
+  // Перевірка, чи користувач здійснив достатньо великий свайп
+  if (deltaY > 50) {
+    isDragging = true;
+  }
+});
+
+blockToHide.addEventListener("touchend", function (event) {
+  if (isDragging) {
+    // Приховати блок, якщо користувач здійснив свайп вниз
+    blockToHide.classList.add("hide");
+  }
+
+  // Скидання змінних після завершення тач-дотику
+  startY = 0;
+  isDragging = false;
+});
