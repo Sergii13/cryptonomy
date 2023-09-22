@@ -6,7 +6,7 @@
     }
     position: relative;
     @media (max-width: $mobile) {
-        position: fixed;
+        position: sticky;
         top: 0;
         left: 0;
         width: 100%;
@@ -20,16 +20,20 @@
     &__top {
         padding: 20px 0;
         background: #E5FBBA;
+        overflow: hidden;
+        position: relative;
         transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
         @media (max-width: $mobile) {
+            transform: translateY(0%);
+            max-height: 200px;
             padding: 15px 0;
-            overflow: hidden;
-            .down & {
+
+            .header._header-scroll:not(.show-top) & {
                 transform: translateY(-100%);
                 max-height: 0px;
                 padding: 0;
             }
-            .up & {
+            .show-top & {
                 transform: translateY(0%);
                 max-height: 200px;
                 padding: 15px 0;

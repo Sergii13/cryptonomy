@@ -117,18 +117,20 @@ export function headerScroll() {
   const headerShowTimer = header.dataset.scrollShow
     ? header.dataset.scrollShow
     : 500;
-  if (window.innerWidth <= 768) {
-    document.querySelector(".wrapper").style.paddingTop =
-      header.offsetHeight + "px";
-  }
+  // if (window.innerWidth <= 768) {
+  //   document.querySelector(".wrapper").style.paddingTop =
+  //     header.getBoundingClientRect().height + "px";
+  // }
 
-  const startPoint = header.querySelector(".header__top").offsetHeight;
+  const startPoint = 100;
   let scrollDirection = 0;
   let timer;
+  // header.classList.add("show-top");
   document.addEventListener("windowScroll", function (e) {
     const scrollTop = window.scrollY;
     clearTimeout(timer);
     if (scrollTop >= startPoint) {
+      header.classList.remove("show-top");
       !header.classList.contains("_header-scroll")
         ? header.classList.add("_header-scroll")
         : null;
@@ -155,9 +157,11 @@ export function headerScroll() {
         }, headerShowTimer);
       }
     } else {
+      header.classList.add("show-top");
       header.classList.contains("_header-scroll")
         ? header.classList.remove("_header-scroll")
         : null;
+
       if (headerShow) {
         header.classList.contains("_header-show")
           ? header.classList.remove("_header-show")
