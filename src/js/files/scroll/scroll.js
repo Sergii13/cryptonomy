@@ -131,6 +131,7 @@ export function headerScroll() {
     clearTimeout(timer);
     if (scrollTop >= startPoint) {
       header.classList.remove("show-top");
+      document.documentElement.classList.remove("hide-block");
       !header.classList.contains("_header-scroll")
         ? header.classList.add("_header-scroll")
         : null;
@@ -144,6 +145,7 @@ export function headerScroll() {
             : null;
         } else {
           document.documentElement.classList.add("up");
+
           document.documentElement.classList.remove("down");
           // upscroll code
           !header.classList.contains("_header-show")
@@ -158,6 +160,7 @@ export function headerScroll() {
       }
     } else {
       header.classList.add("show-top");
+      document.documentElement.classList.add("hide-block");
       header.classList.contains("_header-scroll")
         ? header.classList.remove("_header-scroll")
         : null;
